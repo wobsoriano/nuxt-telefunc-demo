@@ -8,12 +8,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.13"
+    "esno": "^0.16.3",
+    "nuxt": "3.0.0-rc.13",
+    "prisma": "^4.6.1"
   },
   "dependencies": {
-    "@keyv/sqlite": "^3.6.2",
-    "keyv": "^4.5.2",
+    "@prisma/client": "^4.6.1",
     "sqlite": "^4.1.2",
     "telefunc": "^0.1.34"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "telefunc@0.1.34": "patches/telefunc@0.1.34.patch"
+    }
+  },
+  "prisma": {
+    "seed": "esno prisma/seed.ts",
+    "schema": "./prisma/schema.prisma"
   }
 }

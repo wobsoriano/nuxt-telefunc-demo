@@ -8,3 +8,5 @@ node_modules
 dist
 .sqlite
 .DS_Store
+/prisma/migrations/
+/prisma/dev.*

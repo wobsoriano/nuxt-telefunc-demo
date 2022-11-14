@@ -1,25 +1,29 @@
 <script setup lang="ts">
-import { onLoad, onNewTodo } from './index.telefunc.mjs'
+import { onDeleteTodo, onGetTodos, onToggleTodo } from './index.telefunc.mjs'
 
-const { data, refresh } = await useAsyncData(() => onLoad())
-const text = ref('')
+const todos = await onGetTodos()
 
-async function onSubmit() {
-  await onNewTodo({ text: text.value })
-  text.value = ''
-  refresh()
+async function handleChange(id: number) {
+  await onToggleTodo(id)
+  // await todos.refresh()
+}
+
+async function handleDelete(id: number) {
+  await onDeleteTodo(id)
+  // await todos.refresh()
 }
 </script>
 
 <template>
   <div>
-    <ul v-if="data">
-      <li v-for="item in data.todoItems">{{ item.text }}</li>
+    <ul >
+      <li v-for="todo in todos" :key="todo.id">
+        <h2>
+          <span>{{ todo.title }}</span>
+          <input type="checkbox" :checked="todo.completed" @change="handleChange(todo.id)" />
+          <button @click="handleDelete(todo.id)">remove</button>
+        </h2>
+      </li>
     </ul>
-    <br />
-    <form @submit.prevent="onSubmit">
-      <input type="text" v-model="text" />
-      <button type="submit">Add to-do</button>
-    </form>
   </div>
 </template>
