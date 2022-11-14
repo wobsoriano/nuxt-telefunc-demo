@@ -8,8 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.13",
-    "vite": "npm:@brillout/vite@3.1.0-apptype-fix"
+    "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
     "@brillout/proto-db": "^0.1.1",
