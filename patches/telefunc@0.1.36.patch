@@ -1,13 +1,9 @@
 diff --git a/dist/cjs/node/vite/index.js b/dist/cjs/node/vite/index.js
-index 7407390885ee7b990c1b4319f0e976209109630b..fe054d7a87a6c3f0d50d3a526d56b29548bb6486 100644
+index 7407390885ee7b990c1b4319f0e976209109630b..e7cd38bb4fcd6f34847062e6b050e47c43242bfd 100644
 --- a/dist/cjs/node/vite/index.js
 +++ b/dist/cjs/node/vite/index.js
-@@ -20,10 +20,10 @@ function plugin(config) {
-         (0, transform_1.transform)(),
-         (0, commonConfig_1.commonConfig)(),
-         ...(0, devConfig_1.devConfig)(),
--        (0, buildConfig_1.buildConfig)(),
-+        // (0, buildConfig_1.buildConfig)(),
+@@ -23,7 +23,7 @@ function plugin(config) {
+         (0, buildConfig_1.buildConfig)(),
          (0, retrieveDevServer_1.retrieveDevServer)(),
          (0, packageJsonFile_1.packageJsonFile)(),
 -        ...(0, importBuild_1.importBuild)(),
