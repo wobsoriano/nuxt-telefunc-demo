@@ -1,28 +1,26 @@
-# Nuxt 3 Minimal Starter
+# Nuxt + Telefunc Starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Look at the [Telefunc docs](https://github.com/brillout/telefunc) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+Install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+pnpm install
 ```
 
-## Development Server
+Setup prisma
+
+```bash
+npx prisma migrate dev --name init
+npx prisma db seed
+```
 
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Production
@@ -30,13 +28,11 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+DATABASE_URL="file:/Users/somewhere/nuxt-telefunc/prisma/dev.db" pnpm preview
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
