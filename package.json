@@ -20,5 +20,10 @@
   "prisma": {
     "seed": "esno prisma/seed.ts",
     "schema": "./prisma/schema.prisma"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "telefunc@0.1.40": "patches/telefunc@0.1.40.patch"
+    }
   }
 }

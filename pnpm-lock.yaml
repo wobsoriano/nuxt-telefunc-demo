@@ -1,5 +1,10 @@
 lockfileVersion: 5.4
 
+patchedDependencies:
+  telefunc@0.1.40:
+    hash: c43iivwutyh4unkbetn6au64y4
+    path: patches/telefunc@0.1.40.patch
+
 specifiers:
   '@prisma/client': ^4.7.0
   esno: ^0.16.3
@@ -11,7 +16,7 @@ specifiers:
 dependencies:
   '@prisma/client': 4.7.0_prisma@4.7.0
   sqlite: 4.1.2
-  telefunc: 0.1.40
+  telefunc: 0.1.40_c43iivwutyh4unkbetn6au64y4
 
 devDependencies:
   esno: 0.16.3
@@ -4418,7 +4423,7 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /telefunc/0.1.40:
+  /telefunc/0.1.40_c43iivwutyh4unkbetn6au64y4:
     resolution: {integrity: sha512-EagvTdddk7wvilh7AhwR2u738gdYqj/IEPjlTke5pzRLnejTxkBU3C24fMFIZagK7Qj4xcsaWX6LxgtR6tW6Hw==}
     engines: {node: '>=12.19.0'}
     peerDependencies:
@@ -4437,6 +4442,7 @@ packages:
       picocolors: 1.0.0
       ts-morph: 14.0.0
     dev: false
+    patched: true
 
   /terser/5.16.0:
     resolution: {integrity: sha512-KjTV81QKStSfwbNiwlBXfcgMcOloyuRdb62/iLFPGBcVNF4EXjhdYBhYHmbJpiBrVxZhDvltE11j+LBQUxEEJg==}

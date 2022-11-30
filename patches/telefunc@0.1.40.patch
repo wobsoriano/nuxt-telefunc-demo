@@ -1,0 +1,22 @@
+diff --git a/dist/cjs/node/vite/index.js b/dist/cjs/node/vite/index.js
+index dd988d6ee4dd2dd361d5461df11d9742ab18b940..4547b721c68c2dbf068def33a041e8b6a7e64bbd 100644
+--- a/dist/cjs/node/vite/index.js
++++ b/dist/cjs/node/vite/index.js
+@@ -8,7 +8,7 @@ const devConfig_1 = require("./plugins/devConfig");
+ const buildConfig_1 = require("./plugins/buildConfig");
+ const retrieveDevServer_1 = require("./plugins/retrieveDevServer");
+ const packageJsonFile_1 = require("./plugins/packageJsonFile");
+-const importBuild_1 = require("./plugins/importBuild");
++// const importBuild_1 = require("./plugins/importBuild");
+ const previewConfig_1 = require("./plugins/previewConfig");
+ const printShieldGenResult_1 = require("./plugins/printShieldGenResult");
+ const manifest_1 = require("./plugins/manifest");
+@@ -23,7 +23,7 @@ function plugin(config) {
+         ...(0, buildConfig_1.buildConfig)(),
+         (0, retrieveDevServer_1.retrieveDevServer)(),
+         (0, packageJsonFile_1.packageJsonFile)(),
+-        ...(0, importBuild_1.importBuild)(),
++        // ...(0, importBuild_1.importBuild)(),
+         (0, previewConfig_1.previewConfig)(),
+         (0, manifest_1.manifest)(config),
+         (0, printShieldGenResult_1.printShieldGenResult)()

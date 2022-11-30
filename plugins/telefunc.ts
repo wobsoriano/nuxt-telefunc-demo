@@ -3,7 +3,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.hooks.hook('app:rendered', async () => {
       const { config } = await import('telefunc')
       config.telefuncUrl = '/api/_telefunc'
-      config.telefuncFiles = ['/Users/wobsoriano/tmp/nuxt-telefunc/pages/index.telefunc.mjs']
+      config.telefuncFiles = ['/Users/wobsoriano/tmp/nuxt-telefunc-demo/pages/index.telefunc.mjs']
     })
   }
 
